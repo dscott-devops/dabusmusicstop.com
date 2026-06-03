@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Da Bus Music Stop — browse cover songs by genre: 70s Soul, 70s Rock, 90s R&B, 90s Alternative, New Finds.">
+  <title>Music — Da Bus Music Stop</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-brand">
+    <svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
+      <circle cx="16" cy="16" r="15" fill="#111" stroke="#C0392B" stroke-width="1"/>
+      <circle cx="16" cy="16" r="12" fill="none" stroke="#C0392B" stroke-width="0.5" opacity="0.5"/>
+      <circle cx="16" cy="16" r="9"  fill="none" stroke="#C0392B" stroke-width="0.5" opacity="0.5"/>
+      <circle cx="16" cy="16" r="6"  fill="none" stroke="#C0392B" stroke-width="0.5" opacity="0.5"/>
+      <circle cx="16" cy="16" r="3"  fill="#C0392B"/>
+      <circle cx="16" cy="16" r="1"  fill="#111"/>
+    </svg>
+    <a href="index.html" class="nav-wordmark">Da Bus Music Stop</a>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="music.html" class="active">Music</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="connect.html">Connect</a></li>
+  </ul>
+</nav>
+
+<main>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <h1>Music</h1>
+    <p class="page-subtitle">Cover songs &middot; Originals coming soon</p>
+  </div>
+
+  <!-- FILTER BAR -->
+  <div class="filter-bar">
+    <button class="filter-btn active" data-genre="all">All</button>
+    <button class="filter-btn" data-genre="70s-soul">70s Soul</button>
+    <button class="filter-btn" data-genre="70s-rock">70s Rock</button>
+    <button class="filter-btn" data-genre="90s-rb">90s R&amp;B</button>
+    <button class="filter-btn" data-genre="90s-alt">90s Alternative</button>
+    <button class="filter-btn" data-genre="new-finds">New Finds</button>
+  </div>
+
+  <!-- 90s R&B -->
+  <div class="genre-section" data-genre="90s-rb">
+    <div class="genre-section-header">
+      <p class="section-label">90s R&amp;B</p>
+      <span class="genre-count" id="count-90s-rb"></span>
+    </div>
+    <div class="video-grid" id="grid-90s-rb"></div>
+  </div>
+
+  <!-- 70s Soul -->
+  <div class="genre-section" data-genre="70s-soul">
+    <div class="genre-section-header">
+      <p class="section-label">70s Soul</p>
+      <span class="genre-count" id="count-70s-soul"></span>
+    </div>
+    <div class="video-grid" id="grid-70s-soul"></div>
+  </div>
+
+  <!-- 70s Rock -->
+  <div class="genre-section" data-genre="70s-rock">
+    <div class="genre-section-header">
+      <p class="section-label">70s Rock</p>
+      <span class="genre-count" id="count-70s-rock"></span>
+    </div>
+    <div class="video-grid" id="grid-70s-rock"></div>
+  </div>
+
+  <!-- 90s Alternative -->
+  <div class="genre-section" data-genre="90s-alt">
+    <div class="genre-section-header">
+      <p class="section-label">90s Alternative</p>
+      <span class="genre-count" id="count-90s-alt"></span>
+    </div>
+    <div class="video-grid" id="grid-90s-alt"></div>
+  </div>
+
+  <!-- New Finds -->
+  <div class="genre-section" data-genre="new-finds">
+    <div class="genre-section-header">
+      <p class="section-label">New Finds</p>
+      <span class="genre-count" id="count-new-finds"></span>
+    </div>
+    <div class="video-grid" id="grid-new-finds"></div>
+  </div>
+
+  <!-- ORIGINALS TEASER -->
+  <div class="originals-teaser">
+    <p class="coming-label">Coming Soon</p>
+    <h2>Original Music</h2>
+    <p>Subscribe on YouTube to be the first to hear it.</p>
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">
+    <svg width="20" height="20" viewBox="0 0 32 32" aria-hidden="true">
+      <circle cx="16" cy="16" r="15" fill="#111" stroke="#444" stroke-width="1"/>
+      <circle cx="16" cy="16" r="3" fill="#444"/>
+      <circle cx="16" cy="16" r="1" fill="#111"/>
+    </svg>
+    <span class="footer-wordmark">Da Bus Music Stop</span>
+  </div>
+  <p class="footer-copy">&copy; <span id="year"></span> Da Bus Music Stop. All rights reserved.</p>
+</footer>
+
+<script src="js/main.js"></script>
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
